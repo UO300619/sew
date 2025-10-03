@@ -49,21 +49,16 @@ nav a{
     
 }
 
-/*estilo para el titulo principal que, al ser un link, tenga otro colo que no sea morado*/
-/*hereda background de header, 0,1,2*/
-h1 a:visited{
-    color:#ffffff;
-}
 
 /* quitar el subrayado del link del h1, 0,0,2,hereda background de header*/
-h1 a{
+h1 a,h1 a:visited{
     text-decoration-line: none;
     color:#ffffff;
 }
 
-/*estilo para las migas ya visitadas y cuando pasas el raton*/
+/*estilo para las migas ya visitadas y no y cuando pasas el raton*/
 /*hereda background de body,0,1,2*/
-p a:visited{
+p a:visited,p a{
     color:#000000;
 }
 
