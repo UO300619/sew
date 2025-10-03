@@ -16,6 +16,23 @@ header {
     color:#ffffff;
 }
 
+nav{
+    font-size: 1.2em;
+}
+
+/*0,0,2*/
+/*estilo para el titulo principal del articulo,hereda el color de body*/
+article header{
+    background-color: #ffffff;
+}
+
+/*0,0,2*/
+h2+p{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
 /*estilos para los titulos h2 y h3 */
 /*especificidad 0,0,1*/
 h2,h3{
@@ -38,7 +55,7 @@ h1 a:visited{
     color:#ffffff;
 }
 
-/* quitar el subrayado del link del h1, 0,0,2*/
+/* quitar el subrayado del link del h1, 0,0,2,hereda background de header*/
 h1 a{
     text-decoration-line: none;
     color:#ffffff;
@@ -53,7 +70,7 @@ p a:visited{
 /*estilo para las migas*/
  /*0,0,2*/
 header + p{
-    font-size: 0.7em;
+    font-size: 0.8em;
  }
 
  /*migas cuando pasas raton*/

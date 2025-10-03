@@ -3,20 +3,16 @@
 
 header{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 nav{
     display: flex;
-    flex-direction: row;
-    gap: 3em;
+    gap:7em;
 }
 
-video,audio {
- width:100%;
- height:auto;
-}
+
 
 /* Media Queries para pantallas pequeñas */
 @media (min-width: 320px) and (max-width: 799px) {
@@ -39,5 +35,9 @@ video,audio {
     /*0,0,2*/
     header + p{
         display:none;
+    }
+    video,audio {
+        width:100%;
+        height:auto;
     }
 }
