@@ -1,0 +1,82 @@
+/* datos personales Enol Ruiz Barcala UO300619*/
+/* Estilos generales del proyecto MotoGP-Desktop*/
+
+/* Color de fondo y texto principal para todo el sitio */
+/* especificidad: 0,0,1 */
+body {
+    font-family: 'Courier New', Courier, monospace; /*  especificidad: 0,0,1 */
+    background-color: #ffffff; 
+    color: #000000;
+}
+
+/* Estilos para el encabezado del sitio */
+/* especificidad: 0,0,1 */
+header {
+    background-color: #111861;
+    color:#ffffff;
+}
+
+/*estilos para los titulos h2 y h3 */
+/*especificidad 0,0,1*/
+h2,h3{
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+}
+
+/*estilo para el menu de navegacion*/
+/* especificidad: 0,0,2 */
+nav a{
+    color: #ffffff; /* hereda background de header*/
+    text-decoration-line: none;
+    
+}
+
+/*estilo para el titulo principal que, al ser un link, tenga otro colo que no sea morado*/
+/*hereda background de header, 0,1,2*/
+h1 a:visited{
+    color:#ffffff;
+}
+
+/* quitar el subrayado del link del h1, 0,0,2*/
+h1 a{
+    text-decoration-line: none;
+}
+
+/*estilo para las migas ya visitadas y cuando pasas el raton*/
+/*hereda background de body,0,1,2*/
+p a:visited{
+    color:#000000;
+}
+
+/*estilo para las migas*/
+ /*0,0,2*/
+header + p{
+    font-size: 0.7em;
+ }
+
+ /*migas cuando pasas raton*/
+ /*0,1,2*/
+p a:hover{
+    font-weight: bold;
+    font-size: 1.1em;
+ } 
+
+/*estilo para em menu de navegacion cuando pasas el raton */
+/*especificidad 0,1,2*/
+nav a:hover, nav a:focus {
+    background-color: #cccccc;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/*especificidad:0,1,0*/
+.active {
+    
+    background-color: #cccccc;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+

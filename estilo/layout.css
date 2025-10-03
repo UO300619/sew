@@ -1,0 +1,43 @@
+/* datos personales Enol Ruiz Barcala UO300619*/
+/* Layout del proyecto MotoGP-Desktop*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+video,audio {
+ width:100%;
+ height:auto;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (min-width: 320px) and (max-width: 799px) {
+    /* Ajustes para dispositivos móviles */
+    /* Cambiar el diseño del header y nav a columna */
+    /*0,0,1*/
+    /*se redefinen flex direction y gap*/
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    /*0,0,1*/
+    /*se redefinen flex direction y gap*/
+    nav{
+        flex-direction: column;
+        gap: 1em;
+    }
+    /*quitar las migas en pantallas pequeñas*/
+    /*se redefinen flex direction y gap*/
+    /*0,0,2*/
+    header + p{
+        display:none;
+    }
+}
