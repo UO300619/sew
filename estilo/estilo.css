@@ -41,6 +41,7 @@ h1 a:visited{
 /* quitar el subrayado del link del h1, 0,0,2*/
 h1 a{
     text-decoration-line: none;
+    color:#ffffff;
 }
 
 /*estilo para las migas ya visitadas y cuando pasas el raton*/
