@@ -14,7 +14,7 @@ nav{
 
 
 /* Media Queries para pantallas pequeñas */
-@media (min-width: 320px) and (max-width: 825px) {
+@media (min-width: 320px) and (max-width: 840px) {
     /* Ajustes para dispositivos móviles */
     /* Cambiar el diseño del header y nav a columna */
     /*0,0,1*/

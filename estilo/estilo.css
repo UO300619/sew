@@ -24,6 +24,7 @@ nav{
 /*estilo para el titulo principal del articulo,hereda el color de body*/
 article header{
     background-color: #ffffff;
+    color: #000000;
 }
 
 /*0,0,2*/
