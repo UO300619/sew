@@ -72,7 +72,7 @@ header + p{
  /*0,1,2*/
 p a:hover{
     font-weight: bold;
-    font-size: 1.1em;
+
  } 
 
 /*estilo para em menu de navegacion cuando pasas el raton */
@@ -81,7 +81,7 @@ nav a:hover, nav a:focus {
     background-color: #cccccc;
     color: #000000;
     font-weight: bold;
-    font-size: 1.1em;
+
 }
 
 /*especificidad:0,1,0*/
