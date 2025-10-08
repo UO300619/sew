@@ -4,7 +4,6 @@
 header{
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 nav{
@@ -19,7 +18,7 @@ nav{
     /* Ajustes para dispositivos móviles */
     /* Cambiar el diseño del header y nav a columna */
     /*0,0,1*/
-    /*se redefinen flex direction y gap*/
+    /*se redefinen flex direction,text align y gap*/
     header{
         flex-direction: column;
         text-align: center;
