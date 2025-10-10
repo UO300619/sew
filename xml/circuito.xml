@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+    <nombreC nombre="Automotodrom Brno"></nombreC>
+    <longitud unidad="5.403 metros"></longitud>
+    <anchura unidad="15 metros"></anchura>
+    <fecha dia="del 18 al 20 de julio"></fecha>
+    <hora hora="14:00"></hora>
+    <numeroVueltas vueltas="21"></numeroVueltas>
+    <localidad ciudad="Brno"></localidad>
+    <pais pais="Chequia"></pais>
+    <patrocinador empresa="Tissot"></patrocinador>
+    <referencias>
+        <referencia url="https://www.automotodrombrno.cz/en">Sitio oficial</referencia>
+        <referencia url="https://www.motogpbrno.com/es">Otra referencia</referencia>
+        <referencia url="https://www.dazn.com/es-ES/news/motor/circuito-brno-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-republica-checa-mundial-motogp/83vt46p8sj0i1g3wdcmgk6gmb">Otra referencia</referencia>
+    </referencias>
+    <imagenes>
+        <imagen url="multimedia/BRNO">Circuito General</imagen>
+        <imagen url="multimedia/esquemaBRNO">Mapa del circuito</imagen>
+        <imagen url="multimedia/gradasBRNO">Gradas</imagen>
+    </imagenes>
+    <videos>
+        <video url="multimedia/BRNO2015">Circuito en 2015</video>
+    </videos>
+    <origen>
+        <coordenada latitud="49°12'10''N" longitud="16°26'43''E" altitud="440m"></coordenada>
+    </origen>
+    <tramos>
+        <tramo longitud="664metros" numeroSector="">
+            <coordenada latitud="49°12'10''N" longitud="49°12'10''N" altitud="440"></coordenada>
+        </tramo>
+    </tramos>
+    <vencedor>
+        <persona nombre="Marc Marquez"></persona>
+    </vencedor>
+    <clasificados>
+        <persona nombre="Marc Marquez"></persona>
+        <persona nombre="Pedro Acosta"></persona>
+        <persona nombre="Enea Bastianini"></persona>
+    </clasificados>
+</circuito>

@@ -35,8 +35,18 @@ nav{
     header + p{
         display:none;
     }
-    video,audio {
+    video {
         width:100%;
         height:auto;
+    }
+    audio {
+        width:100%;
+    }
+    picture{
+        width:100%;
+        height:auto;
+    }
+    table{
+        flex-direction: column;
     }
 }

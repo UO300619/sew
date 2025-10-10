@@ -1,0 +1,42 @@
+<!ELEMENT circuito (nombreC, longitud, anchura, fecha, hora,numeroVueltas,localidad,pais,patrocinador,referencias,imagenes,videos,origen,tramos,vencedor,clasificados)>
+<!ELEMENT nombreC (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT anchura (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT numeroVueltas (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT patrocinador (#PCDATA)>
+<!ELEMENT referencias (referencia*)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT imagenes (imagen*)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT videos (video*)>
+<!ELEMENT video (#PCDATA)>
+<!ELEMENT origen (coordenada)>
+<!ELEMENT tramos (tramo*)>
+<!ELEMENT tramo (coordenada)>
+<!ELEMENT numeroSector (#PCDATA)>
+<!ELEMENT coordenada (#PCDATA)>
+<!ELEMENT vencedor (persona)>
+<!ELEMENT clasificados (persona*)>
+<!ELEMENT persona (#PCDATA)>
+<!ATTLIST nombreC nombre CDATA #REQUIRED>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
+<!ATTLIST anchura unidad CDATA #REQUIRED>
+<!ATTLIST fecha dia CDATA #REQUIRED>
+<!ATTLIST hora hora CDATA #REQUIRED>
+<!ATTLIST numeroVueltas vueltas CDATA #REQUIRED>
+<!ATTLIST localidad ciudad CDATA #REQUIRED>
+<!ATTLIST pais pais CDATA #REQUIRED>
+<!ATTLIST patrocinador empresa CDATA #REQUIRED>
+<!ATTLIST referencia url CDATA #IMPLIED>
+<!ATTLIST imagen url CDATA #IMPLIED>
+<!ATTLIST video url CDATA #IMPLIED>
+<!ATTLIST coordenada latitud CDATA #REQUIRED>
+<!ATTLIST coordenada longitud CDATA #REQUIRED>
+<!ATTLIST coordenada altitud CDATA #IMPLIED>
+<!ATTLIST tramo longitud CDATA #REQUIRED>
+<!ATTLIST tramo numeroSector CDATA #REQUIRED>
+<!ATTLIST persona nombre CDATA #REQUIRED>
