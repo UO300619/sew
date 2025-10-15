@@ -27,10 +27,55 @@
         <coordenada latitud="49°12'10''N" longitud="16°26'43''E" altitud="440m"></coordenada>
     </origen>
     <tramos>
-        <tramo longitud="664metros" numeroSector="">
-            <coordenada latitud="49°12'10''N" longitud="49°12'10''N" altitud="440"></coordenada>
-        </tramo>
-    </tramos>
+    <tramo longitud="619,39" numeroSector="1">
+        <coordenada latitud="49°12'12''N" longitud="16°26'45''E" altitud="440"/>
+    </tramo>
+    <tramo longitud="245,39" numeroSector="1">
+        <coordenada latitud="49°12'22''N" longitud="16°26'26''E" altitud="438"/>
+    </tramo>
+    <tramo longitud="164,79" numeroSector="1">
+        <coordenada latitud="49°12'20''N" longitud="16°26'34''E" altitud="438"/>
+    </tramo>
+    <tramo longitud="503,43" numeroSector="2">
+        <coordenada latitud="49°12'21''N" longitud="16°26'59''E" altitud="446"/>
+    </tramo>
+    <tramo longitud="116,09" numeroSector="2">
+        <coordenada latitud="49°12'24''N" longitud="16°27'02''E" altitud="449"/>
+    </tramo>
+    <tramo longitud="121,6" numeroSector="2">
+        <coordenada latitud="49°12'28''N" longitud="16°27'00''E" altitud="450"/>
+    </tramo>
+    <tramo longitud="102,54" numeroSector="2">
+        <coordenada latitud="49°12'30''N" longitud="16°27'03''E" altitud="449"/>
+    </tramo>
+    <tramo longitud="459,64" numeroSector="2">
+        <coordenada latitud="49°12'33''N" longitud="16°27'24''E" altitud="430"/>
+    </tramo>
+    <tramo longitud="562,69" numeroSector="3">
+        <coordenada latitud="49°12'22''N" longitud="16°27'22''E" altitud="423"/>
+    </tramo>
+    <tramo longitud="412,11" numeroSector="3">
+        <coordenada latitud="49°12'22''N" longitud="16°27'37''E" altitud="406"/>
+    </tramo>
+    <tramo longitud="496,13" numeroSector="3">
+        <coordenada latitud="49°12'09''N" longitud="16°27'51''E" altitud="387"/>
+    </tramo>
+    <tramo longitud="170,76" numeroSector="3">
+        <coordenada latitud="49°12'06''N" longitud="16°27'47''E" altitud="379"/>
+    </tramo>
+    <tramo longitud="259,98" numeroSector="3">
+        <coordenada latitud="49°12'10''N" longitud="16°27'36''E" altitud="384"/>
+    </tramo>
+    <tramo longitud="264,36" numeroSector="3">
+        <coordenada latitud="49°12'07''N" longitud="16°27'26''E" altitud="404"/>
+    </tramo>
+    <tramo longitud="485,48" numeroSector="1">
+        <coordenada latitud="49°12'12''N" longitud="16°27'04''E" altitud="437"/>
+    </tramo>
+    <tramo longitud="375,78" numeroSector="1">
+        <coordenada latitud="49°12'08''N" longitud="16°26'50''E" altitud="441"/>
+    </tramo>
+</tramos>
     <vencedor>
         <persona nombre="Marc Marquez"></persona>
     </vencedor>
