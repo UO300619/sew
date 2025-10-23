@@ -16,12 +16,12 @@
         <referencia url="https://www.dazn.com/es-ES/news/motor/circuito-brno-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-republica-checa-mundial-motogp/83vt46p8sj0i1g3wdcmgk6gmb">Otra referencia</referencia>
     </referencias>
     <imagenes>
-        <imagen url="multimedia/BRNO">Circuito General</imagen>
-        <imagen url="multimedia/esquemaBRNO">Mapa del circuito</imagen>
-        <imagen url="multimedia/gradasBRNO">Gradas</imagen>
+        <imagen url="MotoGP-Desktop/multimedia/BRNO">Circuito General</imagen>
+        <imagen url="MotoGP-Desktop/multimedia/esquemaBRNO">Mapa del circuito</imagen>
+        <imagen url="MotoGP-Desktop/multimedia/gradasBRNO">Gradas</imagen>
     </imagenes>
     <videos>
-        <video url="multimedia/BRNO2015">Circuito en 2015</video>
+        <video url="MotoGP-Desktop/multimedia/BRNO2015">Circuito en 2015</video>
     </videos>
     <origen>
         <coordenada latitud="49°12'10''N" longitud="16°26'43''E" altitud="440m"></coordenada>

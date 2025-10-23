@@ -1,0 +1,8 @@
+Cambio de codificacion a UTF-8.
+Cambio de los rangos de imagenes y videos.
+Cambio de tipos en hora a xs:time.
+Cambio de tipos en longitud a xs:decimal.
+Cambio de tipos en anchura a xs:integer.
+Cambio de tipos de longitud,altitud a xs:decimal.
+cambio de rangos de clasificados min 3 y max 3.
+Creacion para la restriccion min y max de latitud altitud y longitud.

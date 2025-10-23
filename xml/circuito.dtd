@@ -31,12 +31,12 @@
 <!ATTLIST localidad ciudad CDATA #REQUIRED>
 <!ATTLIST pais pais CDATA #REQUIRED>
 <!ATTLIST patrocinador empresa CDATA #REQUIRED>
-<!ATTLIST referencia url CDATA #IMPLIED>
-<!ATTLIST imagen url CDATA #IMPLIED>
+<!ATTLIST referencia url CDATA #REQUIRED>
+<!ATTLIST imagen url CDATA #REQUIRED>
 <!ATTLIST video url CDATA #IMPLIED>
 <!ATTLIST coordenada latitud CDATA #REQUIRED>
 <!ATTLIST coordenada longitud CDATA #REQUIRED>
-<!ATTLIST coordenada altitud CDATA #IMPLIED>
+<!ATTLIST coordenada altitud CDATA #REQUIRED>
 <!ATTLIST tramo longitud CDATA #REQUIRED>
 <!ATTLIST tramo numeroSector CDATA #REQUIRED>
 <!ATTLIST persona nombre CDATA #REQUIRED>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0">
+  <rect x="0" y="0" width="800" height="400" fill="white" strokeWidth="1" stroke="black" />
+  <line x1="50" y1="350" x2="750" y2="350" stroke="black" strokeWith="2" />
+  <line x1="50" y1="50" x2="50" y2="350" stroke="black" strokeWith="2" />
+  <text x="320.0" y="390" fontFamily="Verdana" fontSize="18" style="none">Puntos del circuito</text>
+  <text x="10" y="200.0" fontFamily="Verdana" fontSize="18" style="writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
+  <polyline points="50.0,92.25352112676057 93.75,92.25352112676057 137.5,100.7042253521127 181.25,100.7042253521127 225.0,66.90140845070425 268.75,54.22535211267609 312.5,50.0 356.25,54.22535211267609 400.0,134.50704225352115 443.75,164.08450704225353 487.5,235.9154929577465 531.25,316.19718309859155 575.0,350.0 618.75,328.8732394366197 662.5,244.3661971830986 706.25,104.92957746478874 750.0,88.02816901408454 750,350 50,350" stroke="red" strokeWith="2" fill="lightblue" />
+</svg>

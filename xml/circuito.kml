@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Origen del circuito</name>
+      <description>Punto inicial del trazado</description>
+      <Point>
+        <coordinates>16.44528,49.20278,440.0</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Trazado del circuito</name>
+    <Placemark>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>16.44528,49.20278,440.0 16.44583,49.20333,440.0 16.44056,49.20611,438.0 16.44278,49.20556,438.0 16.44972,49.20583,446.0 16.45056,49.20667,449.0 16.45,49.20778,450.0 16.45083,49.20833,449.0 16.45667,49.20917,430.0 16.45611,49.20611,423.0 16.46028,49.20611,406.0 16.46417,49.2025,387.0 16.46306,49.20167,379.0 16.46,49.20278,384.0 16.45722,49.20194,404.0 16.45111,49.20333,437.0 16.44722,49.20222,441.0</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>ff0000ff</color>
+          <width>3</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>

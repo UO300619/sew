@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuito 
+    xmlns="http://www.uniovi.es"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
+    
+    <nombreC nombre="Automotodrom Brno"></nombreC>
+    <longitud metros="5.403"></longitud>
+    <anchura metros="15"></anchura>
+    <fecha dia="del 18 al 20 de julio"></fecha>
+    <hora hora="14:00:00"></hora>
+    <numeroVueltas vueltas="21"></numeroVueltas>
+    <localidad ciudad="Brno"></localidad>
+    <pais pais="Chequia"></pais>
+    <patrocinador empresa="Tissot"></patrocinador>
+    <referencias>
+        <referencia url="https://www.automotodrombrno.cz/en">Sitio oficial</referencia>
+        <referencia url="https://www.motogpbrno.com/es">Otra referencia</referencia>
+        <referencia url="https://www.dazn.com/es-ES/news/motor/circuito-brno-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-republica-checa-mundial-motogp/83vt46p8sj0i1g3wdcmgk6gmb">Otra referencia</referencia>
+    </referencias>
+    <imagenes>
+        <imagen url="MotoGP-Desktop/multimedia/BRNO">Circuito General</imagen>
+        <imagen url="MotoGP-Desktop/multimedia/esquemaBRNO">Mapa del circuito</imagen>
+        <imagen url="MotoGP-Desktop/multimedia/gradasBRNO">Gradas</imagen>
+    </imagenes>
+    <videos>
+        <video url="MotoGP-Desktop/multimedia/BRNO2015">Circuito en 2015</video>
+    </videos>
+    <origen>
+        <coordenada latitud="49.20278" longitud="16.44528" altitud="440"></coordenada>
+    </origen>
+    <tramos>
+    <tramo longitud="619.39" numeroSector="1">
+        <coordenada latitud="49.20333" longitud="16.44583" altitud="440"/>
+    </tramo>
+    <tramo longitud="245.39" numeroSector="1">
+        <coordenada latitud="49.20611" longitud="16.44056" altitud="438"/>
+    </tramo>
+    <tramo longitud="164.79" numeroSector="1">
+        <coordenada latitud="49.20556" longitud="16.44278" altitud="438"/>
+    </tramo>
+    <tramo longitud="503.43" numeroSector="2">
+        <coordenada latitud="49.20583" longitud="16.44972" altitud="446"/>
+    </tramo>
+    <tramo longitud="116.09" numeroSector="2">
+        <coordenada latitud="49.20667" longitud="16.45056" altitud="449"/>
+    </tramo>
+    <tramo longitud="121.6" numeroSector="2">
+        <coordenada latitud="49.20778" longitud="16.45" altitud="450"/>
+    </tramo>
+    <tramo longitud="102.54" numeroSector="2">
+        <coordenada latitud="49.20833" longitud="16.45083" altitud="449"/>
+    </tramo>
+    <tramo longitud="459.64" numeroSector="2">
+        <coordenada latitud="49.20917" longitud="16.45667" altitud="430"/>
+    </tramo>
+    <tramo longitud="562.69" numeroSector="3">
+        <coordenada latitud="49.20611" longitud="16.45611" altitud="423"/>
+    </tramo>
+    <tramo longitud="412.11" numeroSector="3">
+        <coordenada latitud="49.20611" longitud="16.46028" altitud="406"/>
+    </tramo>
+    <tramo longitud="496.13" numeroSector="3">
+        <coordenada latitud="49.20250" longitud="16.46417" altitud="387"/>
+    </tramo>
+    <tramo longitud="170.76" numeroSector="3">
+        <coordenada latitud="49.20167" longitud="16.46306" altitud="379"/>
+    </tramo>
+    <tramo longitud="259.98" numeroSector="3">
+        <coordenada latitud="49.20278" longitud="16.46" altitud="384"/>
+    </tramo>
+    <tramo longitud="264.36" numeroSector="3">
+        <coordenada latitud="49.20194" longitud="16.45722" altitud="404"/>
+    </tramo>
+    <tramo longitud="485.48" numeroSector="1">
+        <coordenada latitud="49.20333" longitud="16.45111" altitud="437"/>
+    </tramo>
+    <tramo longitud="375.78" numeroSector="1">
+        <coordenada latitud="49.20222" longitud="16.44722" altitud="441"/>
+    </tramo>
+</tramos>
+    <vencedor>
+        <persona nombre="Marc Marquez"></persona>
+    </vencedor>
+    <clasificados>
+        <persona nombre="Marc Marquez"></persona>
+        <persona nombre="Pedro Acosta"></persona>
+        <persona nombre="Enea Bastianini"></persona>
+    </clasificados>
+</circuito>
