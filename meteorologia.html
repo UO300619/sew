@@ -12,6 +12,7 @@
 	<meta name ="keywords" content ="desarrollo,Meteorología" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 
+	<script src="js/ciudad.js"></script>
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 </head>
@@ -31,14 +32,20 @@
     </header>
     <p>Estás en: <a href="index.html">Inicio</a> >>> <strong>Meteorologia</strong></p>
 <main>
-	<article>
-		<header>
-			<h2>Meteorologia de MotoGP-Desktop</h2>
-			<p>En desarrollo</p>
-		</header>
-		
-	</article>
-    
+	<h2>Informacion de la Meteorologia</h2>
+	<script>
+		const c =new Ciudad("Brno","Chequia","brneño/a");
+		c.rellenarPoblacionYCoordenada();
+		document.write('<h2>Ciudad</h2>');
+        document.write('<p>' + c.getNombre() + '</p>');
+        document.write('<h2>Pais</h2>');
+        document.write('<p>' + c.getPais() + '</p>');
+        document.write('<h2>Poblacion y Gentilicio</h2>');
+        document.write(c.getPoblacionAndGentilicio());
+        document.write('<h2>Coordenadas</h2>');
+		c.writeCoordenadas();
+	</script>
+	
 </main>
 <footer>
         <p>&copy; 2025 MotoGP Desktop - Enol Ruiz Barcala</p>

@@ -9,6 +9,10 @@ body {
     color: #000000;
 }
 
+
+/*especificidad 0,0,3*/
+
+
 /* Estilos para el encabezado del sitio */
 /* especificidad: 0,0,1 */
 header {
@@ -33,6 +37,9 @@ h2+p{
     color: #000000;
 }
 
+h2{
+    margin: 0;
+}
 
 /*estilos para los titulos h2 y h3 */
 /*especificidad 0,0,1*/

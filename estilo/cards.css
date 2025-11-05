@@ -1,6 +1,12 @@
 /* MotoGP-Desktop*/
 /* Hoja de estilo para el juego de memoria con cartas */
 
+/*Para el layout de las cartas borrar despues*/
+/*diplay:grid*/
+/* grid-template-columns:repeat(4,1fr)*/
+/* grid-template-rows:repeat(3,1fr)*/
+/*grid-gap:xem lo que quiera*/
+
 /* Regla con el estilo general para las tarjetas del juego */
 /* especificidad: 002 */
 main article {
@@ -12,6 +18,13 @@ main article {
     transform-style: preserve-3d;
     transition: transform .5s;
     box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.3);
+}
+
+main > h2{
+    background-color: #ffffff;
+    color: #000000;
+
+
 }
 
 /* Regla con la transformación que permite girar la carta cuando se le pone el data-state al valor flip */
