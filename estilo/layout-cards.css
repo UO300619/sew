@@ -1,7 +1,7 @@
 main{
     display:grid;
     grid-template-columns: repeat(4 , 1fr);
-    grid-template-rows:auto repeat(3 , 1fr);
+    grid-template-rows:auto auto repeat(3 , 1fr);
     gap:1.5em;
     padding: 0 1.5em 1.5em 1.5em; /* sin padding arriba */
 }
