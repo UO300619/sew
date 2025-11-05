@@ -18,7 +18,7 @@ main > p {
     text-align: center;  /* centrar texto */
     font-size: 1.3em;
     font-weight: bold;
-     margin-bottom: -0.8em;
+     margin-bottom: 0em;
 }
 
 @media(max-width:37.5em){
