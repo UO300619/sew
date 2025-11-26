@@ -33,8 +33,8 @@ main article > section:nth-of-type(2){
 /*0,0,1*/
 label {
     width: 100%;
-    max-width: 100%;   /* ← evita overflow */
-    display: block;    /* opcional pero recomendado */
+    max-width: 100%;   
+    display: block;    
 }
 
 
