@@ -12,6 +12,7 @@ header{
 nav{
     display: flex;
     gap:2em;
+    
 }
 
 /*0,0,2*/
@@ -30,9 +31,10 @@ main article > section:nth-of-type(2){
 
 }
 /*0,0,1*/
-label{
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+label {
+    width: 100%;
+    max-width: 100%;   /* ← evita overflow */
+    display: block;    /* opcional pero recomendado */
 }
 
 
@@ -107,11 +109,12 @@ label{
     }
 
     /*0,0,1
-    Redefinicion de word-wrap y overflow-wrap*/
-    label{
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    }  
+    Redefinicion de width, max-width y display*/
+    label {
+    width: 100%;
+    max-width: 100%;   /* ← evita overflow */
+    display: block;    /* opcional pero recomendado */
+} 
 
  
 
