@@ -71,7 +71,7 @@ class Cronometro {
 
         let cadena = mm + ":" + ss + "." + decimas;
 
-        const parrafo = document.getElementById("pantalla") || document.querySelector("main p");
+        const parrafo = document.querySelector("main p");
         if (parrafo) parrafo.textContent = cadena;
     }
 

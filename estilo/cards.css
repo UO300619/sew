@@ -20,6 +20,7 @@ main article {
     box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.3);
 }
 
+/*0,0,2*/
 main > h2{
     background-color: #ffffff;
     color: #000000;
@@ -36,6 +37,7 @@ main article[data-state=flip] {
 /* Reglas con los estilos generales para el encabezado y la imagen de la carta */
 /* especificidad: 002 */
 /* especificidad: 002 */
+/*Hereda color de primer plano de main*/
 article h3,
 article img {
     width: 100%;

@@ -14,6 +14,11 @@
 
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+
+	<link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+
+	<script src="js/circuito.js"></script>
 </head>
 
 <body>
@@ -24,7 +29,7 @@
 			<a href="piloto.html" title="Información del piloto">Piloto</a>	
 			<a href="circuito.html" title="Circuito de la carrera"  class="active">Circuito</a>
 			<a href="meteorologia.html" title="Meteorologia del dia">Meteorología</a>
-			<a href="clasificaciones.html" title="Clasificaciones de la carrera">Clasificaciones</a>
+			<a href="clasificaciones.php" title="Clasificaciones de la carrera">Clasificaciones</a>
 			<a href="juegos.html" title="Juegos de MotoGP">Juegos</a>
 			<a href="ayuda.html" title="Ayuda sobre la pagina">Ayuda</a>
 		</nav>
@@ -33,12 +38,30 @@
 <main>
 	<article>
 		<header>
-			<h2>Circuito de MotoGP-Desktop</h2>
-			<p>En desarrollo</p>
+			<h2>Circuito de Brno</h2>
 		</header>
-		
+		<section>
+    		<h3>Selecciona HTML</h3>
+    		<label>
+        		Cargar archivo:
+        		<input type="file" accept=".html,text/html" />
+    		</label>
+		</section>
+		<section>
+    		<h3>Selecciona SVG</h3>
+    		<label>
+        		Cargar archivo:
+        		<input type="file" accept=".svg,text/svg" />
+    		</label>
+		</section>
+		<section>
+    		<h3>Selecciona KML</h3>
+    			<label>
+        			Cargar archivo:
+        			<input type="file" accept=".kml" />
+    			</label>
+		</section>
 	</article>
-    
 </main>
 <footer>
         <p>&copy; 2025 MotoGP Desktop - Enol Ruiz Barcala</p>

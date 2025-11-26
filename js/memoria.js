@@ -5,6 +5,9 @@ class Memoria {
         this.tablero_bloqueado = false;
 
         this.cartas = Array.from(document.querySelectorAll("main article"));
+         this.cartas.forEach(carta => {
+            carta.addEventListener("click", () => this.flip(carta));
+        });
         this.barajarCartas();
 
         this.crono = new Cronometro();
@@ -49,8 +52,8 @@ class Memoria {
     }
 
     deshabilitarCartas() {
-        this.primera_carta.removeAttribute("onclick");
-        this.segunda_carta.removeAttribute("onclick");
+        this.primera_carta.style.pointerEvents = "none";
+        this.segunda_carta.style.pointerEvents = "none";
         this.comprobarFinJuego();
 
         this.reiniciar();

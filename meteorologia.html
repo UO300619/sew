@@ -11,10 +11,11 @@
 	<meta name ="description" content ="pagina de meteorología de MotoGP" />
 	<meta name ="keywords" content ="desarrollo,Meteorología" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="js/ciudad.js"></script>
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+	
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 			<a href="piloto.html" title="Información del piloto">Piloto</a>	
 			<a href="circuito.html" title="Circuito de la carrera">Circuito</a>
 			<a href="meteorologia.html" title="Meteorologia del dia"   class="active">Meteorología</a>
-			<a href="clasificaciones.html" title="Clasificaciones de la carrera">Clasificaciones</a>
+			<a href="clasificaciones.php" title="Clasificaciones de la carrera">Clasificaciones</a>
 			<a href="juegos.html" title="Juegos de MotoGP">Juegos</a>
 			<a href="ayuda.html" title="Ayuda sobre la pagina">Ayuda</a>
 		</nav>
@@ -34,17 +35,163 @@
 <main>
 	<h2>Informacion de la Meteorologia</h2>
 	<script>
-		const c =new Ciudad("Brno","Chequia","brneño/a");
-		c.rellenarPoblacionYCoordenada();
-		document.write('<h2>Ciudad</h2>');
-        document.write('<p>' + c.getNombre() + '</p>');
-        document.write('<h2>Pais</h2>');
-        document.write('<p>' + c.getPais() + '</p>');
-        document.write('<h2>Poblacion y Gentilicio</h2>');
-        document.write(c.getPoblacionAndGentilicio());
-        document.write('<h2>Coordenadas</h2>');
-		c.writeCoordenadas();
+		const ciudad =new Ciudad("Brno","Chequia","brneño/a");
+		document.write('<h3>Ciudad</h3>');
+        document.write('<p>' + ciudad.getNombre() + '</p>');
+        document.write('<h3>Pais</h3>');
+        document.write('<p>' + ciudad.getPais() + '</p>');
+        document.write('<h3>Poblacion y Gentilicio</h3>');
+        document.write(ciudad.getPoblacionAndGentilicio());
+        document.write('<h3>Coordenadas</h3>');
+		ciudad.writeCoordenadas();
+		(function() {
+            // buscar el último <p> cuyo texto empiece por "Coordenadas:"
+            const ps = document.querySelectorAll('p');
+            let pIdx = -1;
+            for (let i = ps.length - 1; i >= 0; i--) {
+                if (ps[i].textContent.trim().startsWith('Coordenadas:')) { pIdx = i; break; }
+            }
+            if (pIdx === -1) return;
+
+            // buscar el último <h2> exactamente con texto "Coordenadas"
+            const h2s = document.querySelectorAll('h3');
+            let targetH2 = null;
+            for (let j = h2s.length - 1; j >= 0; j--) {
+                if (h2s[j].textContent.trim() === 'Coordenadas') { targetH2 = h2s[j]; break; }
+            }
+            if (!targetH2) return;
+
+            // insertar el <p> justo después del <h2>
+            const p = ps[pIdx];
+            const parent = targetH2.parentNode;
+            parent.insertBefore(p, targetH2.nextSibling);
+        })();
+    
 	</script>
+	<section>
+        <h2>Información meteorológica</h2>
+    </section>
+
+    <script>
+        $(function () {
+
+            function destinoSection() {
+                return $('main').children('section').last();
+            }
+
+            $(document).on('meteorologiaReady', function (e, meteorologia) {
+                const cont = destinoSection();
+                cont.empty();
+
+                cont.append($('<h2>').text('Información meteorológica'));
+
+                if (meteorologia && Array.isArray(meteorologia.diarios) && meteorologia.diarios.length) {
+                    const diario = meteorologia.diarios[0];
+                    cont.append($('<h3>').text('Datos diarios'));
+                    const dl = $('<dl>');
+                    dl.append($('<dt>').text('Salida del sol'));
+                    dl.append($('<dd>').text(diario.sunrise || 'N/D'));
+                    dl.append($('<dt>').text('Puesta del sol'));
+                    dl.append($('<dd>').text(diario.sunset || 'N/D'));
+                    cont.append(dl);
+                }
+
+                if (meteorologia && Array.isArray(meteorologia.horariosCarrera) && meteorologia.horariosCarrera.length) {
+                    cont.append($('<h3>').text('Franjas horarias (día de la carrera)'));
+                    const tabla = $('<table>');
+                    const thead = $('<thead>');
+                    thead.append($('<tr>').append(
+                        $('<th>').text('Hora'),
+                        $('<th>').text('Temp (°C)'),
+                        $('<th>').text('Sensación (°C)'),
+                        $('<th>').text('Precip. (mm)'),
+                        $('<th>').text('Humedad (%)'),
+                        $('<th>').text('Viento (m/s)'),
+                        $('<th>').text('Dir (°)')
+                    ));
+                    tabla.append(thead);
+
+                    const tbody = $('<tbody>');
+                    meteorologia.horariosCarrera.slice(0, 24).forEach(h => {
+                        tbody.append($('<tr>').append(
+                            $('<td>').text(h.time || ''),
+                            $('<td>').text(h.temperature_2m != null ? h.temperature_2m : 'N/D'),
+                            $('<td>').text(h.apparent_temperature != null ? h.apparent_temperature : 'N/D'),
+                            $('<td>').text(h.precipitation != null ? h.precipitation : 'N/D'),
+                            $('<td>').text(h.relativehumidity_2m != null ? h.relativehumidity_2m : 'N/D'),
+                            $('<td>').text(h.windspeed_10m != null ? h.windspeed_10m : 'N/D'),
+                            $('<td>').text(h.winddirection_10m != null ? h.winddirection_10m : 'N/D')
+                        ));
+                    });
+                    tabla.append(tbody);
+                    cont.append(tabla);
+                } else {
+                    cont.append($('<p>').text('No se han obtenido franjas horarias para el día de la carrera.'));
+                }
+
+                
+                if (ciudad && typeof ciudad.getMeteorologiaEntrenos === 'function') {
+                    ciudad.getMeteorologiaEntrenos();
+                }
+            });
+
+            $(document).on('meteorologiaError', function (e, err) {
+                const cont = destinoSection();
+                cont.empty();
+                cont.append($('<h2>').text('Información meteorológica'));
+                cont.append($('<p>').text('Error al obtener datos meteorológicos: ' + (err && err.message ? err.message : err)));
+                console.error(err);
+            });
+
+            $(document).on('meteorologiaEntrenosReady', function (e, resultado) {
+                const cont = destinoSection();
+                cont.append($('<h3>').text('Medias entrenamientos (3 días)'));
+
+                if (resultado && Array.isArray(resultado.days) && resultado.days.length) {
+                    const tabla = $('<table>');
+                    const thead = $('<thead>');
+                    thead.append($('<tr>').append(
+                        $('<th>').text('Fecha'),
+                        $('<th>').text('Temp media (°C)'),
+                        $('<th>').text('Precip. media (mm)'),
+                        $('<th>').text('Viento medio (m/s)'),
+                        $('<th>').text('Humedad media (%)')
+                    ));
+                    tabla.append(thead);
+
+                    const tbody = $('<tbody>');
+                    resultado.days.forEach(d => {
+                        tbody.append($('<tr>').append(
+                            $('<td>').text(d.date || ''),
+                            $('<td>').text(d.mean_temperature_2m != null ? d.mean_temperature_2m : 'N/D'),
+                            $('<td>').text(d.mean_precipitation != null ? d.mean_precipitation : 'N/D'),
+                            $('<td>').text(d.mean_windspeed_10m != null ? d.mean_windspeed_10m : 'N/D'),
+                            $('<td>').text(d.mean_relativehumidity_2m != null ? d.mean_relativehumidity_2m : 'N/D')
+                        ));
+                    });
+                    tabla.append(tbody);
+                    cont.append(tabla);
+                } else {
+                    cont.append($('<p>').text('No se han obtenido datos de entrenamientos.'));
+                }
+            });
+
+            $(document).on('meteorologiaEntrenosError', function (e, err) {
+                const cont = destinoSection();
+                cont.append($('<h3>').text('Medias entrenamientos (3 días)'));
+                cont.append($('<p>').text('Error al obtener datos de entrenamientos: ' + (err && err.message ? err.message : err)));
+                console.error(err);
+            });
+
+            
+            if (ciudad && typeof ciudad.getMeteorologiaCarrera === 'function') {
+                ciudad.getMeteorologiaCarrera();
+            } else {
+                console.error('getMeteorologiaCarrera no disponible en la instancia creada.');
+            }
+        });
+    </script>
+    
 	
 </main>
 <footer>
