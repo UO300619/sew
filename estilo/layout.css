@@ -111,10 +111,15 @@ label {
     /*0,0,1
     Redefinicion de width, max-width y display*/
     label {
+    display: block;
     width: 100%;
-    max-width: 100%;   /* ← evita overflow */
-    display: block;    /* opcional pero recomendado */
-} 
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    }
+    input {
+    width: 100%;
+    }
 
  
 
