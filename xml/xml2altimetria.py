@@ -11,7 +11,7 @@ class Svg(object):
     """
     def __init__(self):
         # Versión SVG 1.1 válida
-        self.raiz = ET.Element('svg', xmlns="http://www.w3.org/2000/svg", version="1.1")
+        self.raiz = ET.Element('svg', xmlns="http://www.w3.org/2000/svg", version="2.0")
 
     def addRect(self, x, y, width, height, fill, strokeWidth, stroke):
         ET.SubElement(self.raiz, 'rect',

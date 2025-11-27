@@ -15,7 +15,7 @@ class Circuito {
         return true;
     }
 
-    
+
 
     configurarInput() {
         const input = document.querySelector("article section label input");
@@ -44,37 +44,37 @@ class Circuito {
         const docHTML = parser.parseFromString(contenido, "text/html");
 
         const contenedor = document.querySelector("main article section");
-        contenedor.innerHTML="";
+        contenedor.innerHTML = "";
 
 
-        
+
         const datosGenerales = docHTML.querySelector("dl");
         if (datosGenerales) {
             contenedor.insertAdjacentHTML("beforeend", "<h3>Datos generales</h3>");
             contenedor.insertAdjacentHTML("beforeend", datosGenerales.outerHTML);
         }
 
-  
+
         const referencias = docHTML.querySelector("section:nth-of-type(2) ul");
         if (referencias) {
             contenedor.insertAdjacentHTML("beforeend", "<h3>Referencias</h3>");
             contenedor.insertAdjacentHTML("beforeend", referencias.outerHTML);
         }
 
-        
+
         const imagenes = docHTML.querySelector("section:nth-of-type(3) section");
         if (imagenes) {
             contenedor.insertAdjacentHTML("beforeend", "<h3>Imágenes</h3>");
             contenedor.insertAdjacentHTML("beforeend", imagenes.outerHTML);
         }
 
-  
+
         const resultados = docHTML.querySelector("section:nth-of-type(5)");
         if (resultados) {
             contenedor.insertAdjacentHTML("beforeend", "<h3>Resultados</h3>");
             contenedor.insertAdjacentHTML("beforeend", resultados.outerHTML);
         }
-        
+
 
 
     }
@@ -100,7 +100,7 @@ class CargadorSVG {
 
     configurarInput() {
         const input = document.querySelector("main article > section:nth-of-type(2) input[type='file']");
-        
+
         if (input) {
             input.addEventListener("change", (event) => this.leerArchivoSVG(event));
         } else {
@@ -124,6 +124,7 @@ class CargadorSVG {
 
         lector.onload = (e) => {
             const contenidoSVG = e.target.result;
+            contenidoSVG.querySelector("svg").attr('xmlns', 'http://www.w3.org/2000/svg').attr('version', '1.1');
             this.insertarSVG(contenidoSVG);
         };
 
@@ -139,15 +140,15 @@ class CargadorSVG {
             return;
         }
 
-       contenedor.innerHTML = "";
+        contenedor.innerHTML = "";
 
-   
-       const encabezado = document.createElement("h3");
-       encabezado.textContent = "SVG cargado";
-       contenedor.appendChild(encabezado);
 
-    
-       contenedor.insertAdjacentHTML("beforeend", svgTexto);
+        const encabezado = document.createElement("h3");
+        encabezado.textContent = "SVG cargado";
+        contenedor.appendChild(encabezado);
+
+
+        contenedor.insertAdjacentHTML("beforeend", svgTexto);
 
     }
 }
@@ -155,7 +156,7 @@ class CargadorSVG {
 
 class CargadorKML {
     constructor(map) {
-        this.map = map;  
+        this.map = map;
         this.comprobarApiFile();
         this.configurarInput();
     }
