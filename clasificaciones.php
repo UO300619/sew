@@ -18,7 +18,45 @@ class Clasificacion {
             return false;
         }
 
-        return $xml;
+        if ($xml === false) {
+            echo "<p>Error al cargar el archivo de clasificación.</p>";
+            return;
+        }
+
+        // Registrar namespace del XML
+        $xml->registerXPathNamespace('u', 'http://www.uniovi.es');
+
+        // Leer clasificados
+        $clasificados = $xml->xpath('//u:clasificados/u:persona');
+
+        // Si no hay resultados
+        if (!$clasificados) {
+            echo "<p>No se encontraron clasificados en el XML.</p>";
+            return;
+        }
+
+        echo "
+        <h3>Clasificación del Mundial Tras la Carrera</h3>
+        <table>
+            <tr>
+                <th scope='col'>Posición</th>
+                <th scope='col'>Piloto</th>
+            </tr>
+        ";
+
+        $posicion = 1;
+        foreach ($clasificados as $persona) {
+            $nombre = htmlspecialchars((string)$persona['nombre']);
+            echo "
+                <tr>
+                    <th scope='row'>$posicion</th>
+                    <td>$nombre</td>
+                </tr>
+            ";
+            $posicion++;
+        }
+
+        echo "</table>";
     }
 }
 ?>
@@ -64,46 +102,6 @@ class Clasificacion {
 <?php
 $clasificacion = new Clasificacion();
 $xml = $clasificacion->consultar();
-
-if ($xml === false) {
-    echo "<p>Error al cargar el archivo de clasificación.</p>";
-    return;
-}
-
-// Registrar namespace del XML
-$xml->registerXPathNamespace('u', 'http://www.uniovi.es');
-
-// Leer clasificados
-$clasificados = $xml->xpath('//u:clasificados/u:persona');
-
-// Si no hay resultados
-if (!$clasificados) {
-    echo "<p>No se encontraron clasificados en el XML.</p>";
-    return;
-}
-
-echo "
-<h3>Clasificación del Mundial Tras la Carrera</h3>
-<table>
-    <tr>
-        <th scope='col'>Posición</th>
-        <th scope='col'>Piloto</th>
-    </tr>
-";
-
-$posicion = 1;
-foreach ($clasificados as $persona) {
-    $nombre = htmlspecialchars((string)$persona['nombre']);
-    echo "
-        <tr>
-            <th scope='row'>$posicion</th>
-            <td>$nombre</td>
-        </tr>
-    ";
-    $posicion++;
-}
-
-echo "</table>";
 ?>
 
 </article>
