@@ -18,7 +18,7 @@ class Circuito {
 
 
     configurarInput() {
-        const input = document.querySelector("article section label input[type='file']");
+        const input = document.querySelector("article section input[type='file']");
         if (input) {
             input.addEventListener("change", (event) => this.leerArchivoHTML(event));
         }
