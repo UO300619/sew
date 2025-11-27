@@ -18,7 +18,7 @@ class Circuito {
 
 
     configurarInput() {
-        const input = document.querySelector("article section label input");
+        const input = document.querySelector("article section label input[type='file']");
         if (input) {
             input.addEventListener("change", (event) => this.leerArchivoHTML(event));
         }
@@ -124,7 +124,7 @@ class CargadorSVG {
 
         lector.onload = (e) => {
             const contenidoSVG = e.target.result;
-            contenidoSVG.querySelector("svg").attr('xmlns', 'http://www.w3.org/2000/svg').attr('version', '1.1');
+            //contenidoSVG.querySelector("svg").attr('xmlns', 'http://www.w3.org/2000/svg').attr('version', '1.1');
             this.insertarSVG(contenidoSVG);
         };
 
