@@ -4,7 +4,6 @@ class Clasificacion {
     public $documento;
 
     public function __construct() {
-        // Archivo XML dentro del directorio xml
         $this->documento = "xml/circuitoEsquema.xml";
     }
 
