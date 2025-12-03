@@ -30,8 +30,9 @@ CREATE TABLE Usuarios (
 
 -- Tabla de Resultados
 CREATE TABLE Resultados (
-    id_usuario INT PRIMARY KEY,
-    id_dispositivo INT NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_dispositivo INT,
     tiempo INT NOT NULL,
     completada BOOLEAN NOT NULL,
     comentarios_usuario VARCHAR(255),

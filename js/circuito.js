@@ -18,7 +18,7 @@ class Circuito {
 
 
     configurarInput() {
-        const input = document.querySelector("article section input[type='file']");
+        const input = document.querySelector("article section input");
         if (input) {
             input.addEventListener("change", (event) => this.leerArchivoHTML(event));
         }
@@ -99,7 +99,7 @@ class CargadorSVG {
     }
 
     configurarInput() {
-        const input = document.querySelector("main article > section:nth-of-type(2) input[type='file']");
+        const input = document.querySelector("main article > section:nth-of-type(2) input");
 
         if (input) {
             input.addEventListener("change", (event) => this.leerArchivoSVG(event));
@@ -174,7 +174,7 @@ class CargadorKML {
 
     configurarInput() {
         const input = document.querySelector(
-            "main article > section:nth-of-type(3) input[type='file']"
+            "main article > section:nth-of-type(3) input"
         );
 
         if (input) {

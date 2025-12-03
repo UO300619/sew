@@ -1,7 +1,7 @@
 /* datos personales Enol Ruiz Barcala UO300619*/
 /* Layout del proyecto MotoGP-Desktop*/
 
-header{
+header {
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;
@@ -9,14 +9,14 @@ header{
 }
 
 /*0,0,1*/
-nav{
+nav {
     display: flex;
-    gap:2em;
-    
+    gap: 2em;
+
 }
 
 /*0,0,2*/
-body > div {
+body>div {
     width: 100%;
     height: 500px;
     margin: 0;
@@ -25,11 +25,12 @@ body > div {
 }
 
 /*0,1,3*/
-main article > section:nth-of-type(2){
-    width:100%;
-    height:auto;
+main article>section:nth-of-type(2) {
+    width: 100%;
+    height: auto;
 
 }
+
 /*0,0,1*/
 label {
     display: block;
@@ -40,56 +41,67 @@ label {
 }
 
 input {
-    width: 100%;
+    width: auto;
 }
 
 
 
 /* Media Queries para pantallas pequeñas */
 @media (min-width: 320px) and (max-width: 840px) {
+
     /* Ajustes para dispositivos móviles */
     /* Cambiar el diseño del header y nav a columna */
     /*0,0,1*/
     /*se redefinen flex direction y gap*/
-    header{
+    header {
         flex-direction: column;
         text-align: center;
     }
+
     /*0,0,2*/
-    body > div {
-        height: 300px; /* altura menor en pantallas pequeñas */
+    body>div {
+        height: 300px;
+        /* altura menor en pantallas pequeñas */
     }
+
     /*0,0,1*/
     /*se redefinen flex direction y gap*/
-    nav{
+    nav {
         flex-direction: column;
         gap: 1em;
     }
+
     /*quitar las migas en pantallas pequeñas*/
     /*se redefinen flex direction y gap*/
     /*0,0,2*/
-    header + p{
-        display:none;
+    header+p {
+        display: none;
     }
+
     /*0,0,1*/
     video {
-        width:100%;
-        height:auto;
-    }
-    /*0,0,1*/
-    audio {
-        width:100%;
-    }
-    /*0,0,1*/
-    img,picture{
         width: 100%;
         height: auto;
     }
+
+    /*0,0,1*/
+    audio {
+        width: 100%;
+    }
+
+    /*0,0,1*/
+    img,
+    picture {
+        width: 100%;
+        height: auto;
+    }
+
     /*0,0,1*/
     table {
         width: 100%;
         display: flex;
     }
+
     /*0,0,1*/
     tr {
         display: flex;
@@ -98,8 +110,10 @@ input {
         margin-bottom: 1em;
         border-bottom: 1px solid #ccc;
     }
+
     /*0,0,1*/
-    th, td {
+    th,
+    td {
         width: 100%;
         text-align: left;
         padding: 0.5em;
@@ -107,16 +121,15 @@ input {
     }
 
     /*0,0,3*/
-    article h2 + img
-    {
+    article h2+img {
         width: 100%;
         height: auto;
         display: block;
     }
 
-  
 
- 
+
+
 
 
 
@@ -131,5 +144,5 @@ input {
         margin: 0;
     }
 
-    
+
 }
