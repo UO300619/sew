@@ -4,8 +4,9 @@
 /* Color de fondo y texto principal para todo el sitio */
 /* especificidad: 0,0,1 */
 body {
-    font-family: 'Courier New', Courier, monospace; /*  especificidad: 0,0,1 */
-    background-color: #ffffff; 
+    font-family: 'Courier New', Courier, monospace;
+    /*  especificidad: 0,0,1 */
+    background-color: #ffffff;
     color: #000000;
 }
 
@@ -17,34 +18,35 @@ body {
 /* especificidad: 0,0,1 */
 header {
     background-color: #111861;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-nav{
+nav {
     font-size: 1.2em;
 }
 
 /*0,0,2*/
 /*estilo para el titulo principal del articulo,hereda el color de body*/
-article header{
+article header {
     background-color: #ffffff;
     color: #000000;
 }
 
 /*0,0,2*/
-h2+p{
+h2+p {
     background-color: #ffffff;
     color: #000000;
 }
 
 /*0,0,1*/
-h2{
+h2 {
     margin: 0;
 }
 
 /*estilos para los titulos h2 y h3 */
 /*especificidad 0,0,1*/
-h2,h3{
+h2,
+h3 {
     background-color: #ffffff;
     color: #000000;
     font-weight: bold;
@@ -52,41 +54,60 @@ h2,h3{
 
 /*estilo para el menu de navegacion*/
 /* especificidad: 0,0,2 */
-nav a{
-    color: #ffffff; /* hereda background de header*/
+nav a {
+    color: #ffffff;
+    /* hereda background de header*/
     text-decoration-line: none;
-    
+
 }
 
 
+
+
 /* quitar el subrayado del link del h1, 0,0,2,hereda background de header*/
-h1 a,h1 a:visited{
+h1 a,
+h1 a:visited {
     text-decoration-line: none;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 /*estilo para las migas ya visitadas y no y cuando pasas el raton*/
 /*hereda background de body,0,1,2*/
-p a:visited,p a{
-    color:#000000;
+p a:visited,
+p a {
+    color: #000000;
+}
+
+/*0,0,2*/
+/*0,1,2*/
+li a,
+li a:visited {
+    text-decoration-line: none;
+    color: #000000;
 }
 
 /*estilo para las migas*/
- /*0,0,2*/
-header + p{
+/*0,0,2*/
+header+p {
     font-size: 0.8em;
- }
+}
 
- /*migas cuando pasas raton*/
- /*0,1,2*/
-p a:hover{
+/*migas cuando pasas raton*/
+/*0,1,2*/
+p a:hover {
     font-weight: bold;
 
- } 
+}
+
+/*0,1,2*/
+li a:hover {
+    font-weight: bold;
+}
 
 /*estilo para em menu de navegacion cuando pasas el raton */
 /*especificidad 0,1,2*/
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
     background-color: #cccccc;
     color: #000000;
     font-weight: bold;
@@ -95,10 +116,9 @@ nav a:hover, nav a:focus {
 
 /*especificidad:0,1,0*/
 .active {
-    
+
     background-color: #cccccc;
     color: #000000;
     font-weight: bold;
     font-size: 1.1em;
 }
-

@@ -1,6 +1,6 @@
 <?php
 
-$host = "Local";
+$host = "localhost";
 $usuario = "DBUSER2025";
 $contraseña = "DBPSWD2025";
 $archivoSQL = "crearBD.sql";
